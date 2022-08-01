@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-poppins box-border bg-[#fee9d3];
+  }
+}
+
+@layer components {
+  .button {
+    @apply bg-white rounded-md p-2 font-bold text-gray-500 border-gray-400;
+  }
+  .icon {
+    @apply h-6 text-2xl text-white;
+  }
+
+  .shipping_inputBox {
+    @apply rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-base;
+  }
+
+  .shipping_labelBox {
+    @apply absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-base peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4;
+  }
+
+  .orderFilter_checkBox {
+    @apply w-4 h-4 text-base bg-gray-100 rounded border-gray-300 cursor-pointer focus:ring-base focus:ring-2;
+  }
+
+  .orderFilter_labelBox {
+    @apply py-2 ml-2 w-full text-sm font-medium text-gray-900 dark:text-gray-300;
+  }
+}
+
+.loading-bar {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+}
+
+body {
+  background-color: #e2f9ff;
+  background-image: linear-gradient(270deg, #e2f9ff 0%, #ecf9ff 100%);
+}
