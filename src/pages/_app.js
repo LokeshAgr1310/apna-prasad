@@ -7,6 +7,10 @@ import LoadingBar from 'react-top-loading-bar'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react';
 import { setCart } from '../slices/cartSlice'
+import Image from 'next/image'
+import Link from 'next/link'
+import { LinkIcon } from '@heroicons/react/outline'
+import Footer from '../components/Footer'
 
 function MyApp({ Component, pageProps }) {
 
@@ -48,6 +52,10 @@ function MyApp({ Component, pageProps }) {
             <Header />
           </header>
           <Component {...pageProps} />
+
+
+          <Footer />
+
         </>
       </Provider>
     </SessionProvider>

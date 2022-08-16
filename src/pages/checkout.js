@@ -30,21 +30,22 @@ function Checkout({ step, addr }) {
     return (
         <div>
             <Head>
-                <title>Checkout - Apna Prasad</title>
+                <title>Apna Prasad | CHECKOUT</title>
             </Head>
-            <div className="max-w-5xl mx-auto px-5 my-10 py-10 block bg-white shadow-md">
-                <div className="flex w-full justify-center flex-col p-3">
+            <div className={`mx-3 xs:mx-6 sm:mx-10 md:mx-12 lg:mx-14 xl:mx-20 px-1 sm:px-1 my-5 sm:my-10 pt-5 pb-5 sm:pb-10 block ${step !== "3" && "bg-white shadow-md pt-16"}`}>
+                <div className="flex w-full justify-center items-center flex-col py-3 sm:p-3">
                     {/* TABS */}
-                    <div className="justify-items-center content-center self-center">
+                    <div className="w-full sm:w-1/2 sm:items-self-center px-8 xs:px-10 sm:px-0">
                         {
-                            step === "2"
-                                ?
-                                <CheckoutSteps step1 />
-                                : step === "3"
-                                    ?
-                                    <CheckoutSteps step1 step2 />
-                                    : step === "4"
-                                    && <CheckoutSteps step1 step2 step3 />
+                            // step === "2"
+                            //     ?
+                            //     <CheckoutSteps step1 />
+                            //     : step === "3"
+                            //         ?
+                            //         <CheckoutSteps step1 step2 />
+                            //         : step === "4"
+                            //         && <CheckoutSteps step1 step2 step3 />
+                            <CheckoutSteps step={step} />
 
                         }
                     </div>
@@ -59,7 +60,7 @@ function Checkout({ step, addr }) {
                 </div>
 
             </div>
-        </div>
+        </div >
     )
 }
 

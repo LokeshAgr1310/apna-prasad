@@ -5,17 +5,28 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
+    // "./node_modules/flowbite/**/*.js",
+    './src/**/*.{html,js}',
+    './node_modules/tw-elements/dist/js/**/*.js'
   ],
   theme: {
     fontFamily: {
       "poppins": ['Poppins', "sans-serif"],
+    },
+    screens: {
+      xs: "320px",
+      sm: "576px",
+      md: '768px',
+      lg: '976px',
+      xl: "1176px",
+      "2xl": '1440px',
     },
     extend: {
       screens: {
         "carouselWidth": "1200px",
       },
       colors: {
-        "base": "#fb8304"
+        "primary": "#fb8304"
       },
       keyframes: {
         "progress": {
@@ -35,5 +46,10 @@ module.exports = {
       }
     },
   },
-  plugins: [require("@tailwindcss/line-clamp"), require('@tailwindcss/forms'), require('flowbite/plugin')],
+  plugins: [
+    require("@tailwindcss/line-clamp"),
+    require('@tailwindcss/forms'),
+    require('flowbite/plugin'),
+    require('tw-elements/dist/plugin')
+  ],
 }

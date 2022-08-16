@@ -157,8 +157,8 @@ function ShippingAddress() {
     }
 
     return (
-        <div className="mt-8 px-5">
-            <h2 className='text-lg font-semibold text-gray-800 mb-3'>DELIVERY ADDRESS</h2>
+        <div className="mt-8 px-2 sm:px-0 md:px-5">
+            <h2 className='text-sm xs:text-base sm:text-lg font-semibold text-gray-800 mb-3'>DELIVERY ADDRESS</h2>
             {
                 userAddress?.length === 0
                     ? (
@@ -166,38 +166,37 @@ function ShippingAddress() {
                             <h3>Don't set any address yet!!</h3>
                         </div>
                     ) : (
-                        <div className="my-5 px-5">
+                        <div className="my-5 md:px-5">
                             <ul className="grid grid-cols-1 w-full">
                                 {
                                     userAddress?.map((address, i) => (
                                         <div key={i}>
-                                            <li className="flex flex-col bg-slate-100 py-4 px-2 rounded-sm shadow-sm mb-5">
-                                                <div className="flex items-center justify-between px-3">
-                                                    <div >
+                                            <li className={`flex flex-col bg-slate-100 py-4 md:px-2 rounded-sm shadow-sm ${userAddress.length - 1 !== i ? "mb-5" : "mb-3"}`}>
+                                                <div className="flex sm:items-center flex-col sm:flex-row sm:justify-between px-2 sm:px-2.5 md:px-3">
+                                                    <div>
+                                                        <form className="flex items-center xs:pl-2 sm:pl-4 cursor-pointer">
+                                                            <input type="radio" checked={address.id === addressCheckedId} onChange={() => setAddressCheckedId(address.id)} value={address.id} name="address" className="sm:w-4 sm:h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2" />
 
-                                                        <form className="flex items-center pl-4 cursor-pointer">
-                                                            <input type="radio" checked={address.id === addressCheckedId} onChange={() => setAddressCheckedId(address.id)} value={address.id} name="address" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2" />
+                                                            <label className="sm:py-4 ml-5 w-full text-sm text-gray-900">
 
-                                                            <label className="py-4 ml-5 w-full text-sm text-gray-900">
-
-                                                                <div className="flex font-semibold items-center">
-                                                                    <h3 className='mr-3 text-lg'>{address.name}</h3>
-                                                                    <span className='text-md'>{address.phone}</span>
+                                                                <div className="flex sm:flex-row flex-col font-semibold sm:items-center">
+                                                                    <h3 className='sm:mr-3 mb-1 text-sm sm:text-base md:text-lg whitespace-nowrap'>{address.name}</h3>
+                                                                    <span className='text-xs sm:text-sm md:text-base'>{address.phone}</span>
                                                                 </div>
-                                                                <div className='w-3/4'>
+                                                                <div className='sm:w-3/4 text-xs sm:text-sm w-full mt-2'>
                                                                     {address.locality}, {address.address},  {address.city}, {address.state} - {address.pincode}
                                                                 </div>
                                                             </label>
                                                         </form>
                                                     </div>
-                                                    <div className="content-center">
+                                                    <div className="my-3 sm:my-0 self-end sm:self-center text-sm xs:text-base">
                                                         <button className='text-blue-600 content-center font-semibold' onClick={() => editAddressButton(address)}>EDIT</button>
                                                     </div>
                                                 </div>
                                                 {
                                                     addressCheckedId === address.id && (
-                                                        <div className="ml-20">
-                                                            <button type='button' onClick={(e) => deliveryAddressHandlerForm(e)} className="px-10 py-2 bg-base text-white rounded-sm hover:shadow-md font-semibold">DELIVER HERE</button>
+                                                        <div className="ml-5 xs:ml-10 sm:ml-14 md:ml-20">
+                                                            <button type='button' onClick={(e) => deliveryAddressHandlerForm(e)} className="px-2.5 xs:px-3 sm:px-10 py-2 text-xs xs:text-sm sm:text-base bg-primary text-white rounded-sm hover:shadow-md font-semibold">DELIVER HERE</button>
                                                         </div>
 
                                                     )
@@ -207,8 +206,8 @@ function ShippingAddress() {
                                                 isEditAddress && editAddressId === address.id &&
                                                 (
                                                     <div className="my-5">
-                                                        <form className='p-4' onSubmit={editAddressFormHandler}>
-                                                            <div className="grid grid-cols-2 mb-10 grid-rows-5 w-full gap-x-10 gap-y-4">
+                                                        <form className='p-1 md:p-3 lg:p-4' onSubmit={editAddressFormHandler}>
+                                                            <div className="grid grid-cols-1 sm:grid-cols-2 mb-10 sm:grid-rows-5 w-full sm:gap-x-2.5 md:gap-x-10 gap-y-4">
                                                                 <div className="relative">
                                                                     <input type="text" value={name} onChange={(e) => setName(e.target.value)} required aria-describedby="floating_helper_text" className="shipping_inputBox peer" placeholder=" " />
                                                                     <label className="shipping_labelBox">Name</label>
@@ -229,7 +228,7 @@ function ShippingAddress() {
                                                                     <label className="shipping_labelBox">Locality</label>
                                                                 </div>
 
-                                                                <div className="relative col-span-2 row-span-2">
+                                                                <div className="relative sm:col-span-2 sm:row-span-2">
                                                                     <textarea type="text" value={area} onChange={(e) => setArea(e.target.value)} required aria-describedby="floating_helper_text" className="shipping_inputBox peer" placeholder=" " rows={5} />
                                                                     <label className="shipping_labelBox">Address (Area and Street)</label>
                                                                 </div>
@@ -256,7 +255,7 @@ function ShippingAddress() {
                                                             </div>
 
                                                             <div className='flex justify-center space-x-5 mt-5'>
-                                                                <button type='submit' className='bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-sm hover:shadow-md font-semibold'>SAVE</button>
+                                                                <button type='submit' className='bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base px-3 xs:px-4 sm:px-7 py-1.5 xs:py-2 sm:py-3 rounded-sm hover:shadow-md font-semibold'>SAVE</button>
                                                                 <button type='button' onClick={() => {
                                                                     setName("")
                                                                     setPhone("")
@@ -270,7 +269,7 @@ function ShippingAddress() {
                                                                     setEditAddressId("")
                                                                     setIsEditAddress(false)
 
-                                                                }} className='text-red-600 font-semibold'>CANCEL</button>
+                                                                }} className='text-red-600 font-semibold text-sm sm:text-base'>CANCEL</button>
                                                             </div>
                                                         </form>
                                                     </div>
@@ -285,12 +284,12 @@ function ShippingAddress() {
                         </div >
                     )
             }
-            <div className='px-5'>
+            <div className='px-2 xs:px-3 sm:px-5'>
                 {
                     isNewAddress ?
                         <div>
-                            <form className='p-4' onSubmit={newAddressFormHandler}>
-                                <div className="grid grid-cols-2 mb-10 grid-rows-5 w-full gap-x-10 gap-y-4">
+                            <form className='p-1 md:p-3 lg:p-4' onSubmit={newAddressFormHandler}>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 mb-10 sm:grid-rows-5 w-full sm:gap-x-2.5 md:gap-x-10 gap-y-4">
                                     <div className="relative">
                                         <input type="text" value={name} onChange={(e) => setName(e.target.value)} required aria-describedby="floating_helper_text" className="shipping_inputBox peer" placeholder=" " />
                                         <label className="shipping_labelBox">Name</label>
@@ -311,7 +310,7 @@ function ShippingAddress() {
                                         <label className="shipping_labelBox">Locality</label>
                                     </div>
 
-                                    <div className="relative col-span-2 row-span-2">
+                                    <div className="relative sm:col-span-2 sm:row-span-2">
                                         <textarea type="text" value={area} onChange={(e) => setArea(e.target.value)} required aria-describedby="floating_helper_text" className="shipping_inputBox peer" placeholder=" " rows={5} />
                                         <label className="shipping_labelBox">Address (Area and Street)</label>
                                     </div>
@@ -338,13 +337,13 @@ function ShippingAddress() {
                                 </div>
 
                                 <div className='flex justify-center space-x-5 mt-5'>
-                                    <button type='submit' className='bg-blue-600 hover:bg-blue-700 text-white px-7 py-3 rounded-sm hover:shadow-md font-semibold'>SAVE</button>
-                                    <button type='button' onClick={() => setIsNewAddress(false)} className='bg-red-600 hover:bg-red-800 text-white px-4 py-3 rounded-sm hover:shadow-md font-semibold'>CANCEL</button>
+                                    <button type='submit' className='bg-blue-600 hover:bg-blue-700 text-white text-sm sm:text-base px-3 xs:px-4 sm:px-7 py-1.5 xs:py-2 sm:py-3 rounded-sm hover:shadow-md font-semibold'>SAVE</button>
+                                    <button type='button' onClick={() => setIsNewAddress(false)} className='text-red-600 hover:text-red-700 font-semibold text-sm sm:text-base'>CANCEL</button>
                                 </div>
                             </form>
                         </div>
                         : (
-                            <button onClick={() => setIsNewAddress(true)} disabled={isEditAddress} className="px-4 py-2 cursor-pointer font-semibold text-white bg-blue-600">
+                            <button onClick={() => setIsNewAddress(true)} disabled={isEditAddress} className="px-2.5 py-1.5 xs:px-3 sm:px-4 xs:py-2 cursor-pointer text-sm sm:text-base font-semibold text-white bg-blue-600">
                                 <i className="fa-solid fa-plus mr-2"></i>
                                 ADD NEW ADDRESS
                             </button>
