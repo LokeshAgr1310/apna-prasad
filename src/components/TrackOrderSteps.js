@@ -29,9 +29,9 @@ function TrackOrderSteps({ step, placedOn, shippedOn, deliveredOn }) {
                         {
                             step === 1
                                 ? (
-                                    <span class="flex h-4 w-4">
-                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5ee67c] opacity-75"></span>
-                                        <span class="relative inline-flex h-4 w-4 rounded-full bg-[#26a541]"></span>
+                                    <span className="flex h-4 w-4">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5ee67c] opacity-75"></span>
+                                        <span className="relative inline-flex h-4 w-4 rounded-full bg-[#26a541]"></span>
                                     </span>
                                 ) : (
 
@@ -54,9 +54,9 @@ function TrackOrderSteps({ step, placedOn, shippedOn, deliveredOn }) {
                         {
                             step === 2
                                 ? (
-                                    <span class="flex h-4 w-4">
-                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5ee67c] opacity-75"></span>
-                                        <span class="relative inline-flex w-4 h-4 rounded-full bg-[#26a541]"></span>
+                                    <span className="flex h-4 w-4">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5ee67c] opacity-75"></span>
+                                        <span className="relative inline-flex w-4 h-4 rounded-full bg-[#26a541]"></span>
                                     </span>
                                 ) : (
 
@@ -78,9 +78,9 @@ function TrackOrderSteps({ step, placedOn, shippedOn, deliveredOn }) {
                         {
                             step === 3
                                 ? (
-                                    <span class="flex h-4 w-4">
-                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5ee67c] opacity-75"></span>
-                                        <span class="relative inline-flex w-4 h-4 rounded-full bg-[#26a541]"></span>
+                                    <span className="flex h-4 w-4">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5ee67c] opacity-75"></span>
+                                        <span className="relative inline-flex w-4 h-4 rounded-full bg-[#26a541]"></span>
                                     </span>
                                 ) : (
 

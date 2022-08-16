@@ -22,18 +22,26 @@ function Footer() {
                     </h3>
                 </div>
                 <div className='flex space-x-4 justify-self-end md:col-span-1'>
-                    <a href="/">
-                        <i className="fa-brands fa-instagram text-sm xs:text-lg transition-colors duration-100 ease-linear text-gray-600 hover:text-white"></i>
-                    </a>
-                    <a href="/">
-                        <i className="fa-brands fa-facebook text-sm xs:text-lg transition-colors duration-100 ease-linear text-gray-600 hover:text-white"></i>
-                    </a>
-                    <a href="/">
-                        <i className="fa-brands fa-youtube text-sm xs:text-lg transition-colors duration-100 ease-linear text-gray-600 hover:text-white"></i>
-                    </a>
-                    <a href="/">
-                        <i className="fa-brands fa-snapchat text-sm xs:text-lg transition-colors duration-100 ease-linear text-gray-600 hover:text-white"></i>
-                    </a>
+                    <Link href="/">
+                        <a>
+                            <i className="fa-brands fa-instagram text-sm xs:text-lg transition-colors duration-100 ease-linear text-gray-600 hover:text-white"></i>
+                        </a>
+                    </Link>
+                    <Link href="/">
+                        <a href="/">
+                            <i className="fa-brands fa-facebook text-sm xs:text-lg transition-colors duration-100 ease-linear text-gray-600 hover:text-white"></i>
+                        </a>
+                    </Link>
+                    <Link href="/">
+                        <a href="/">
+                            <i className="fa-brands fa-youtube text-sm xs:text-lg transition-colors duration-100 ease-linear text-gray-600 hover:text-white"></i>
+                        </a>
+                    </Link>
+                    <Link href="/">
+                        <a href="/">
+                            <i className="fa-brands fa-snapchat text-sm xs:text-lg transition-colors duration-100 ease-linear text-gray-600 hover:text-white"></i>
+                        </a>
+                    </Link>
                 </div>
             </div>
         </footer>

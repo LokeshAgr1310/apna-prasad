@@ -31,9 +31,9 @@ function CheckoutSteps({ step }) {
                         {
                             step === "1"
                                 ? (
-                                    <span class="flex w-2.5 h-2.5 xs:h-3 xs:w-3 sm:w-4 sm:h-4">
-                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5ee67c] opacity-75"></span>
-                                        <span class="relative inline-flex w-2.5 h-2.5 xs:h-3 xs:w-3 sm:w-4 sm:h-4 rounded-full bg-[#26a541]"></span>
+                                    <span className="flex w-2.5 h-2.5 xs:h-3 xs:w-3 sm:w-4 sm:h-4">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5ee67c] opacity-75"></span>
+                                        <span className="relative inline-flex w-2.5 h-2.5 xs:h-3 xs:w-3 sm:w-4 sm:h-4 rounded-full bg-[#26a541]"></span>
                                     </span>
                                 ) : (
 
@@ -57,9 +57,9 @@ function CheckoutSteps({ step }) {
                         {
                             step === "2"
                                 ? (
-                                    <span class="flex w-2.5 h-2.5 xs:h-3 xs:w-3 sm:w-4 sm:h-4">
-                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5ee67c] opacity-75"></span>
-                                        <span class="relative inline-flex w-2.5 h-2.5 xs:h-3 xs:w-3 sm:w-4 sm:h-4 rounded-full bg-[#26a541]"></span>
+                                    <span className="flex w-2.5 h-2.5 xs:h-3 xs:w-3 sm:w-4 sm:h-4">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5ee67c] opacity-75"></span>
+                                        <span className="relative inline-flex w-2.5 h-2.5 xs:h-3 xs:w-3 sm:w-4 sm:h-4 rounded-full bg-[#26a541]"></span>
                                     </span>
                                 ) : (
 
@@ -82,9 +82,9 @@ function CheckoutSteps({ step }) {
                         {
                             step === "3"
                                 ? (
-                                    <span class="flex w-2.5 h-2.5 xs:h-3 xs:w-3 sm:w-4 sm:h-4">
-                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5ee67c] opacity-75"></span>
-                                        <span class="relative inline-flex w-2.5 h-2.5 xs:h-3 xs:w-3 sm:w-4 sm:h-4 rounded-full bg-[#26a541]"></span>
+                                    <span className="flex w-2.5 h-2.5 xs:h-3 xs:w-3 sm:w-4 sm:h-4">
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#5ee67c] opacity-75"></span>
+                                        <span className="relative inline-flex w-2.5 h-2.5 xs:h-3 xs:w-3 sm:w-4 sm:h-4 rounded-full bg-[#26a541]"></span>
                                     </span>
                                 ) : (
 
