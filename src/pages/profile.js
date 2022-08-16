@@ -42,7 +42,7 @@ function Profile() {
             </div>
             <div className="grid grid-cols-5 mt-8 mx-16">
                 <div>
-                    <Image src={data.user.image} width={150} height={150} className="rounded-full" />
+                    <Image src={data?.user?.image} width={150} height={150} className="rounded-full" />
                 </div>
             </div>
         </div>
